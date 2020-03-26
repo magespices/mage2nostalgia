@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  /**
+ * Created by Q-Solutions Studio
+ *
+ * @author	    Przemysław Jankowski <przemek@qsolutionsstudio.com>
+ * @author      Jakub Winkler <jwinkler@qsolutionsstudio.com>
+ */
+-->
+<theme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/theme.xsd">
+    <title>Mage2 Nostalgia</title>
+    <parent>Magento/backend</parent>
+</theme>

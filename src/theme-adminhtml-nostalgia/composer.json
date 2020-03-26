@@ -1,0 +1,14 @@
+{
+    "name": "Mage2 Nostalgia",
+    "description": "Mage2 Nostalgia - Admin Theme based on Magento 1",
+    "license": "MIT",
+    "type": "magento2-theme",
+    "require": {
+        "magento/framework": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Created by Q-Solutions Studio
+*
+* @package  Mage2_NostalgiaTheme
+* @author	Przemysław Jankowski <przemek@qsolutionsstudio.com>
+* @author   Jakub Winkler <jwinkler@qsolutionsstudio.com>
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+  <module name="Mage2_NostalgiaTheme" setup_version="1.0.0" />
+</config>

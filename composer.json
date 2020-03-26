@@ -1,0 +1,48 @@
+{
+  "name": "magespices/mage2nostalgia",
+  "type": "magento2-theme",
+  "license": "OSL-3.0",
+  "authors": [
+    {
+      "name": "Przemysław Jankowski",
+      "email": "przemek@qsolutionsstudio.com"
+    },
+    {
+      "name": "Jakub Winkler",
+      "email": "jwinkler@qsolutionsstudio.com"
+    }
+  ],
+  "description": "Magento 2 Nostalgia Theme",
+  "homepage": "https://github.com/magespices/mage2nostalgia",
+  "keywords": [
+    "magento",
+    "magento2",
+    "admin theme",
+    "core",
+    "dark mode"
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repo.magento.com/"
+    }
+  ],
+  "require": {
+    "magento/framework": ">=102.0.0",
+    "magento/module-backend": ">=101.0.0"
+  },
+  "autoload": {
+    "files": [
+      "src/module-admin-menu/registration.php",
+      "src/module-core/registration.php",
+      "src/module-nostalgia-theme/registration.php",
+      "src/theme-adminhtml-nostalgia/registration.php"
+    ],
+    "psr-4": {
+      "MageSpices\\Core\\": "src/module-core",
+      "MageSpices\\NostalgiaAdminMenu\\": "src/module-admin-menu"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

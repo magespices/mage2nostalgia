@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  /**
+ * Created by Q-Solutions Studio
+ *
+ * @category    MageSpices
+ * @package     MageSpices_NostalgiaAdminMenu
+ * @author      Maciej Buchert <maciej@qsolutionsstudio.com>
+ * @author      Jakub Winkler <jwinkler@qsolutionsstudio.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <!-- Moved Attributes section to Catalog menu -->
+        <update id="Magento_Backend::stores_attributes" parent="Magento_Catalog::catalog" />
+
+        <!-- Moved Promotions section to main menu -->
+        <remove id="Magento_CatalogRule::promo" />
+        <add id="MageSpices_NostalgiaAdminMenu::promo" title="Promotions" translate="title" module="Magento_CatalogRule" sortOrder="30" resource="Magento_CatalogRule::promo"/>
+        <update id="Magento_SalesRule::promo_quote" sortOrder="10" parent="MageSpices_NostalgiaAdminMenu::promo" />
+        <update id="Magento_CatalogRule::promo_catalog" sortOrder="20" parent="MageSpices_NostalgiaAdminMenu::promo" />
+
+        <!-- Created and moved Newsletter main menu -->
+        <add id="MageSpices_NostalgiaAdminMenu::newsletter" title="Newsletter" translate="title" sortOrder="35" module="MageSpices_NostalgiaAdminMenu" resource="Magento_Backend::marketing_communications" />
+        <update id="Magento_Newsletter::newsletter_template" sortOrder="10" parent="MageSpices_NostalgiaAdminMenu::newsletter" />
+        <update id="Magento_Newsletter::newsletter_queue" sortOrder="20" parent="MageSpices_NostalgiaAdminMenu::newsletter" />
+        <update id="Magento_Newsletter::newsletter_subscriber" sortOrder="30" parent="MageSpices_NostalgiaAdminMenu::newsletter" />
+
+        <!-- Created and moved CMS menu to main menu -->
+        <add id="MageSpices_NostalgiaAdminMenu::cms" title="CMS" translate="title" sortOrder="36" module="MageSpices_NostalgiaAdminMenu" resource="Magento_Backend::content_elements" />
+        <update id="Magento_Cms::cms_page" sortOrder="10" parent="MageSpices_NostalgiaAdminMenu::cms" />
+        <update id="Magento_Cms::cms_block" sortOrder="20" parent="MageSpices_NostalgiaAdminMenu::cms" />
+        <update id="Magento_Widget::cms_widget_instance" sortOrder="30" parent="MageSpices_NostalgiaAdminMenu::cms" />
+
+        <!-- Moved Reports item -->
+        <update id="Magento_Reports::report" sortOrder="37" />
+
+        <!-- Moved Cache Management to system menu -->
+        <update id="Magento_Backend::system_cache" parent="Magento_Backend::system" />
+
+        <!-- Moved Index Management to system menu -->
+        <update id="Magento_Indexer::system_index" parent="Magento_Backend::system" />
+
+        <!-- Moved Stores Management to system menu -->
+        <update id="Magento_Backend::system_store" parent="Magento_Backend::system" />
+    </menu>
+</config>
