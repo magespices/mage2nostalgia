@@ -716,13 +716,6 @@ a:hover,
     z-index: 1;
 }
 
-.admin__menu .item-sales .submenu .parent.level-1 .submenu,
-.admin__menu .item-catalog .submenu .parent.level-1 .submenu {
-    display: block;
-    top: 0;
-    left: 1px;
-}
-
 .admin__menu .submenu .parent.level-1:hover .submenu {
     display: block;
 }

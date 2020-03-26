@@ -13,7 +13,12 @@
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
         <!-- Moved Attributes section to Catalog menu -->
-        <update id="Magento_Backend::stores_attributes" parent="Magento_Catalog::catalog" />
+        <update id="Magento_Catalog::catalog_products" title="Manage Products" sortOrder="10" parent="Magento_Catalog::catalog" />
+        <update id="Magento_Catalog::catalog_categories" title="Manage Categories" sortOrder="20" parent="Magento_Catalog::catalog" />
+
+        <add id="MageSpices_NostalgiaAdminMenu::catalog_manage_attributes" title="Attributes" translate="title" module="MageSpices_NostalgiaAdminMenu" sortOrder="500" resource="Magento_Catalog::catalog" parent="Magento_Catalog::catalog" />
+        <add id="MageSpices_NostalgiaAdminMenu::catalog_attributes_attributes" module="MageSpices_NostalgiaAdminMenu" title="Manage Attributes" parent="MageSpices_NostalgiaAdminMenu::catalog_manage_attributes" resource="Magento_Catalog::attributes_attributes" />
+        <add id="MageSpices_NostalgiaAdminMenu::catalog_attributes_sets" module="MageSpices_NostalgiaAdminMenu" title="Manage Attribute Sets" parent="MageSpices_NostalgiaAdminMenu::catalog_manage_attributes" resource="Magento_Catalog::sets" />
 
         <!-- Moved Promotions section to main menu -->
         <remove id="Magento_CatalogRule::promo" />
@@ -32,6 +37,13 @@
         <update id="Magento_Cms::cms_page" sortOrder="10" parent="MageSpices_NostalgiaAdminMenu::cms" />
         <update id="Magento_Cms::cms_block" sortOrder="20" parent="MageSpices_NostalgiaAdminMenu::cms" />
         <update id="Magento_Widget::cms_widget_instance" sortOrder="30" parent="MageSpices_NostalgiaAdminMenu::cms" />
+
+        <!-- sales menu -->
+        <update id="Magento_Sales::sales_order" title="Orders" translate="title" module="Magento_Sales" sortOrder="10" parent="Magento_Sales::sales" />
+        <update id="Magento_Sales::sales_invoice" title="Invoices" translate="title" module="Magento_Sales" sortOrder="20" parent="Magento_Sales::sales" action="sales/invoice" resource="Magento_Sales::sales_invoice"/>
+        <update id="Magento_Sales::sales_shipment" title="Shipments" translate="title" module="Magento_Sales" sortOrder="30" parent="Magento_Sales::sales" action="sales/shipment" resource="Magento_Sales::shipment"/>
+        <update id="Magento_Sales::sales_creditmemo" title="Credit Memos" translate="title" module="Magento_Sales" sortOrder="40" parent="Magento_Sales::sales" action="sales/creditmemo" resource="Magento_Sales::sales_creditmemo"/>
+        <update id="Magento_Sales::sales_transactions" title="Transactions" translate="title" module="Magento_Sales" sortOrder="70" parent="Magento_Sales::sales" action="sales/transactions" resource="Magento_Sales::transactions"/>
 
         <!-- Moved Reports item -->
         <update id="Magento_Reports::report" sortOrder="37" />
