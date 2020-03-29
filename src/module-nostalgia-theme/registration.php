@@ -1,14 +1,13 @@
 <?php
 /**
- * Created by Q-Solutions Studio
+ * Created by MageSpices | Q-Solutions Studio
  *
- * @package  Mage2_NostalgiaTheme
- * @author   Przemysław Jankowski <przemek@qsolutionsstudio.com>
- * @author   Jakub Winkler <jwinkler@qsolutionsstudio.com>
+ * @package  MageSpices_NostalgiaTheme
+ * @author   Q-Solutions Studio <office@qsolutionsstudio.com>
  */
 
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'Mage2_NostalgiaTheme',
+    'MageSpices_NostalgiaTheme',
     __DIR__
 );

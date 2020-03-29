@@ -1,8 +1,8 @@
 {
-  "name": "magento/mage2-nostalgia-theme",
+  "name": "magepsices/module-nostalgia-theme",
   "description": "base module to enable admin theme Mage2 Nostalgia",
   "type": "magento2-module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "require": {
     "php": "~5.5.0|~5.6.0|~7.0.0"
@@ -10,7 +10,7 @@
   "autoload": {
     "files": [ "registration.php" ],
     "psr-4": {
-      "Q\\DarkTheme\\": ""
+      "MageSpices\\NostalgiaTheme\\": ""
     }
   }
 }

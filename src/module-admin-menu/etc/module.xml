@@ -1,18 +1,17 @@
 <?xml version="1.0"?>
 <!--
-  /**
- * Created by Q-Solutions Studio
- *
- * @category    MageSpices
- * @package     MageSpices_NostalgiaAdminMenu
- * @author      Maciej Buchert <maciej@qsolutionsstudio.com>
- * @author      Jakub Winkler <jwinkler@qsolutionsstudio.com>
- */
+/**
+* Created by MageSpices | Q-Solutions Studio
+*
+* @package  MageSpices_NostalgiaAdminMenu
+* @author   Q-Solutions Studio <office@qsolutionsstudio.com>
+*/
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="MageSpices_NostalgiaAdminMenu" setup_version="1.0.0">
+    <module name="MageSpices_NostalgiaAdminMenu" setup_version="1.0.1">
         <sequence>
+            <module name="Magento_Backend" />
             <module name="Magento_Catalog" />
             <module name="Magento_CatalogRule" />
             <module name="Magento_Cms" />
@@ -21,6 +20,7 @@
             <module name="Magento_Reports" />
             <module name="Magento_SalesRule" />
             <module name="Magento_Widget" />
+            <module name="Magento_Inventory" />
         </sequence>
     </module>
 </config>

@@ -1,17 +1,16 @@
 <?php
 /**
- * Created by Q-Solutions Studio | MageSpices
+ * Created by MageSpices | Q-Solutions Studio
  *
  * @category    MageSpices
- * @package     MageSpices_Core
- * @author      Jakub Winkler <jwinkler@qsolutionsstudio.com>
+ * @package     MageSpices_NostalgiaTheme
+ * @author   Q-Solutions Studio <office@qsolutionsstudio.com>
  */
-
 
 use \Magento\Framework\Component\ComponentRegistrar;
 
 ComponentRegistrar::register(
     ComponentRegistrar::THEME,
-    'adminhtml/Mage2/nostalgia',
+    'adminhtml/MageSpices/Mage2Nostalgia',
     __DIR__
 );

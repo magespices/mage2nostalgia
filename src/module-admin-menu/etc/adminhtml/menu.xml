@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!--
-  /**
- * Created by Q-Solutions Studio
- *
- * @category    MageSpices
- * @package     MageSpices_NostalgiaAdminMenu
- * @author      Maciej Buchert <maciej@qsolutionsstudio.com>
- * @author      Jakub Winkler <jwinkler@qsolutionsstudio.com>
- */
+/**
+* Created by MageSpices | Q-Solutions Studio
+*
+* @package  MageSpices_NostalgiaAdminMenu
+* @author   Q-Solutions Studio <office@qsolutionsstudio.com>
+*/
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
@@ -16,15 +14,11 @@
         <update id="Magento_Catalog::catalog_products" title="Manage Products" sortOrder="10" parent="Magento_Catalog::catalog" />
         <update id="Magento_Catalog::catalog_categories" title="Manage Categories" sortOrder="20" parent="Magento_Catalog::catalog" />
 
-        <add id="MageSpices_NostalgiaAdminMenu::catalog_manage_attributes" title="Attributes" translate="title" module="MageSpices_NostalgiaAdminMenu" sortOrder="500" resource="Magento_Catalog::catalog" parent="Magento_Catalog::catalog" />
-        <add id="MageSpices_NostalgiaAdminMenu::catalog_attributes_attributes" module="MageSpices_NostalgiaAdminMenu" title="Manage Attributes" parent="MageSpices_NostalgiaAdminMenu::catalog_manage_attributes" resource="Magento_Catalog::attributes_attributes" />
-        <add id="MageSpices_NostalgiaAdminMenu::catalog_attributes_sets" module="MageSpices_NostalgiaAdminMenu" title="Manage Attribute Sets" parent="MageSpices_NostalgiaAdminMenu::catalog_manage_attributes" resource="Magento_Catalog::sets" />
-
         <!-- Moved Promotions section to main menu -->
         <remove id="Magento_CatalogRule::promo" />
         <add id="MageSpices_NostalgiaAdminMenu::promo" title="Promotions" translate="title" module="Magento_CatalogRule" sortOrder="30" resource="Magento_CatalogRule::promo"/>
-        <update id="Magento_SalesRule::promo_quote" sortOrder="10" parent="MageSpices_NostalgiaAdminMenu::promo" />
-        <update id="Magento_CatalogRule::promo_catalog" sortOrder="20" parent="MageSpices_NostalgiaAdminMenu::promo" />
+        <update id="Magento_CatalogRule::promo_catalog" sortOrder="100" parent="MageSpices_NostalgiaAdminMenu::promo" title="Shopping Cart Price Rules" />
+        <update id="Magento_SalesRule::promo_quote" sortOrder="200" parent="MageSpices_NostalgiaAdminMenu::promo" title="Catalog Price Rules" />
 
         <!-- Created and moved Newsletter main menu -->
         <add id="MageSpices_NostalgiaAdminMenu::newsletter" title="Newsletter" translate="title" sortOrder="35" module="MageSpices_NostalgiaAdminMenu" resource="Magento_Backend::marketing_communications" />
@@ -39,22 +33,45 @@
         <update id="Magento_Widget::cms_widget_instance" sortOrder="30" parent="MageSpices_NostalgiaAdminMenu::cms" />
 
         <!-- sales menu -->
-        <update id="Magento_Sales::sales_order" title="Orders" translate="title" module="Magento_Sales" sortOrder="10" parent="Magento_Sales::sales" />
-        <update id="Magento_Sales::sales_invoice" title="Invoices" translate="title" module="Magento_Sales" sortOrder="20" parent="Magento_Sales::sales" action="sales/invoice" resource="Magento_Sales::sales_invoice"/>
-        <update id="Magento_Sales::sales_shipment" title="Shipments" translate="title" module="Magento_Sales" sortOrder="30" parent="Magento_Sales::sales" action="sales/shipment" resource="Magento_Sales::shipment"/>
-        <update id="Magento_Sales::sales_creditmemo" title="Credit Memos" translate="title" module="Magento_Sales" sortOrder="40" parent="Magento_Sales::sales" action="sales/creditmemo" resource="Magento_Sales::sales_creditmemo"/>
-        <update id="Magento_Sales::sales_transactions" title="Transactions" translate="title" module="Magento_Sales" sortOrder="70" parent="Magento_Sales::sales" action="sales/transactions" resource="Magento_Sales::transactions"/>
+        <update id="Magento_Sales::sales_order" title="Orders" sortOrder="10" parent="Magento_Sales::sales" />
+        <update id="Magento_Sales::sales_invoice" title="Invoices" sortOrder="20" parent="Magento_Sales::sales" />
+        <update id="Magento_Sales::sales_shipment" title="Shipments" sortOrder="30" parent="Magento_Sales::sales" />
+        <update id="Magento_Sales::sales_creditmemo" title="Credit Memos" sortOrder="40" parent="Magento_Sales::sales" />
+        <update id="Magento_Sales::sales_transactions" title="Transactions" sortOrder="70" parent="Magento_Sales::sales" />
 
         <!-- Moved Reports item -->
         <update id="Magento_Reports::report" sortOrder="37" />
 
+        <!-- design settings -->
+        <update id="Magento_Backend::system_design" parent="Magento_Backend::system" sortOrder="9111" />
+
+        <!-- currency settings -->
+        <update id="Magento_CurrencySymbol::system_currency" parent="Magento_Backend::system" sortOrder="9222" />
+
         <!-- Moved Cache Management to system menu -->
-        <update id="Magento_Backend::system_cache" parent="Magento_Backend::system" />
+        <update id="Magento_Backend::system_cache" parent="Magento_Backend::system" sortOrder="9333" />
 
         <!-- Moved Index Management to system menu -->
-        <update id="Magento_Indexer::system_index" parent="Magento_Backend::system" />
+        <update id="Magento_Indexer::system_index" parent="Magento_Backend::system" sortOrder="9444" />
 
-        <!-- Moved Stores Management to system menu -->
-        <update id="Magento_Backend::system_store" parent="Magento_Backend::system" />
+        <!-- stores configuration -> system -->
+        <update id="Magento_Backend::system_store" parent="Magento_Backend::system" title="Manage Stores" sortOrder="9777" />
+        <update id="Magento_Sales::system_order_statuses" title="Order Statuses" parent="Magento_Backend::system" sortOrder="9888" />
+        <update id="Magento_Config::system_config" parent="Magento_Backend::system" sortOrder="9999" />
+
+        <!-- url rewrites -->
+        <update id="Magento_UrlRewrite::urlrewrite" parent="Magento_Catalog::catalog" title="URL Rewrite Management" sortOrder="600" />
+        <update id="Magento_Backend::marketing_seo" parent="Magento_Catalog::catalog" sortOrder="700" />
+        <update id="Magento_Catalog::inventory" parent="Magento_Catalog::catalog" sortOrder="800" />
+        <update id="Magento_InventoryAdminUi::inventory" parent="Magento_Catalog::catalog" sortOrder="900" />
+        <update id="Magento_Backend::stores_attributes"  parent="Magento_Catalog::catalog" sortOrder="500" />
+
+        <!-- update -->
+        <update id="Magento_Tax::sales_tax" parent="Magento_Sales::sales" sortOrder="1000" />
+        <update id="Magento_CheckoutAgreements::sales_checkoutagreement" parent="Magento_Sales::sales" sortOrder="600" />
+
+        <!-- remove stores menu -->
+        <remove id="Magento_Backend::stores" />
+        <remove id="Magento_Backend::content" />
     </menu>
 </config>

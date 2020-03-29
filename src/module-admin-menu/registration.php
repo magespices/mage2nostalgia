@@ -1,11 +1,9 @@
 <?php
 /**
- * Created by Q-Solutions Studio
+ * Created by Magespices | Q-Solutions Studio
  *
- * @category    MageSpices
- * @package     MageSpices_NostalgiaAdminMenu
- * @author      Maciej Buchert <maciej@qsolutionsstudio.com>
- * @author      Jakub Winkler <jwinkler@qsolutionsstudio.com>
+ * @package  MageSpices_NostalgiaAdminMenu
+ * @author   office <office@qsolutionsstudio.com>
  */
 
 \Magento\Framework\Component\ComponentRegistrar::register(

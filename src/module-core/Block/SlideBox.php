@@ -1,10 +1,10 @@
 <?php
 /**
- * Created by Q-Solutions Studio | MageSpices
+ * Created by MageSpices | Q-Solutions Studio
  *
  * @category    MageSpices
  * @package     MageSpices_Core
- * @author      Jakub Winkler <jwinkler@qsolutionsstudio.com>
+ * @author      Q-Solutions Studio <office@qsolutionsstudio.com>
  */
 
 namespace MageSpices\Core\Block;

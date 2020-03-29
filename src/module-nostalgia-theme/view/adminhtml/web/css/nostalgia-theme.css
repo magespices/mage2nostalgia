@@ -563,7 +563,7 @@ a:hover,
 }
 
 .admin__menu li.parent.level-0 > a {
-    line-height: 28px;
+    line-height: 30px;
 }
 
 
@@ -608,6 +608,7 @@ a:hover,
     background: linear-gradient(to bottom, #772e01 0%, #873c02 4%, #c84302 11%, #d24404 15%, #e17a13 70%, #e68616 89%, #e68616 96%, #ffb560 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#772e01', endColorstr='#ffb560', GradientType=0);
     z-index: 100;
+    font-weight: bold;
 }
 
 .admin__menu .level-0._active:first-of-type > a,
@@ -637,7 +638,8 @@ a:hover,
 }
 
 .admin__menu .level-0 > .submenu {
-    top: 28px;
+    z-index: 1000;
+    top: 29px;
     left: 1px;
     min-height: 0;
     background-color: #e3ecee;
@@ -680,10 +682,6 @@ a:hover,
 
 .admin__menu .submenu li.item-setup-wizard {
     display: none;
-}
-
-.admin__menu .submenu li:last-of-type > a {
-    border-bottom: 0;
 }
 
 .admin__menu [class*='level-']:not(.level-0) a:hover {
@@ -1789,7 +1787,6 @@ button.back > span,
 .data-grid .data-grid-filters input[type='text'],
 .admin__control-text,
 .admin__control-select,
-.admin__control-multiselect,
 .admin__control-file-label:before,
 .admin__control-textarea,
 .admin__control-addon [class*='admin__control-'][class] ~ [class*='admin__addon-']:last-child:before,
@@ -1804,6 +1801,12 @@ button.back > span,
     border: 1px solid #c8c8c8;
     border-color: #aaa #c8c8c8 #c8c8c8 #aaa;
     padding: 2px;
+}
+
+.admin__control-select,
+.admin__control-multiselect {
+    width: 280px;
+    font-size: 12px !important;
 }
 
 .data-grid .data-grid-filters select,
@@ -5455,4 +5458,14 @@ h2, .form-sharing-info .admin__legend span,
     .customer-index-edit.page-layout-admin-2columns-left .page-actions-buttons button {
         margin-bottom: 5px;
     }
+}
+
+.data-grid-actions-cell button span {
+    color: #EA7606 !important;
+}
+
+.data-grid .data-grid-filters select, .admin__control-select, .ui-datepicker .ui-datepicker-title select,
+.admin__control-select:active, .ui-datepicker .ui-datepicker-title select:active {
+    background: none !important;
+    background-image: none !important;
 }
