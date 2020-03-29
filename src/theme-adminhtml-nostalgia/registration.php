@@ -11,6 +11,6 @@ use \Magento\Framework\Component\ComponentRegistrar;
 
 ComponentRegistrar::register(
     ComponentRegistrar::THEME,
-    'adminhtml/MageSpices/mage2nostalgia',
+    'adminhtml/MageSpices/Mage2Nostalgia',
     __DIR__
 );

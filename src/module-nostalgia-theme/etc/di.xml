@@ -11,7 +11,7 @@
     <type name="Magento\Theme\Model\View\Design">
         <arguments>
             <argument name="themes" xsi:type="array">
-                <item name="adminhtml" xsi:type="string">MageSpices/mage2nostalgia</item>
+                <item name="adminhtml" xsi:type="string">MageSpices/Mage2Nostalgia</item>
             </argument>
         </arguments>
     </type>
