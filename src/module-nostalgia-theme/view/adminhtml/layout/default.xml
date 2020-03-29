@@ -9,6 +9,6 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-        <css src="Mage2_NostalgiaTheme::css/nostalgia-theme.css" order="100" />
+        <css src="MageSpices_NostalgiaTheme::css/nostalgia-theme.css" order="100" />
     </head>
 </page>
