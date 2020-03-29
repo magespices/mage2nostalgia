@@ -16,12 +16,12 @@ Please say hello to: Magento 2 Nostalgia, ***an admin theme for the 21st century
 ### How to install the theme: 
 
 ```  
- composer require magespices/mage2nostalgia 
+composer require magespices/mage2nostalgia 
 ``` 
 
 and run:
 ```
-    php bin/magento setup:upgrade 
+php bin/magento setup:upgrade 
 ```
 
 to enable modules
@@ -40,3 +40,7 @@ to enable modules
 ### Developed by:
 [@Qsolutions Studio](https://twitter.com/QsolutionsStdio)
 [@MagentoNinja](https://twitter.com/MagentoNinja)
+
+### MageSpices
+
+MageSpices is an initiative taken by Q-Solutions Studio focused on providing free solutions to Magento platform. 
